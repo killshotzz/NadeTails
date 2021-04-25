@@ -7,11 +7,11 @@ NadeTails give you the advantage of tracing your projectiles (smokes, molotovs, 
 
 It's fairly a plug-and-play plugin! You will be generated a CFG file, that you use to customize your tail.
 
-## Installation
+### Installation
 
 All you need is to install the folder structure to your server. And you are ready to go. You can of course look down under here for ConVars.
 
-## ConVars
+### ConVars
 
 * g_Enabled - Enables Nade Tails (0/1). (Default: 1)
 * g_AllowPlayers - Allow players to use nade tails with !tails, otherwise admins only (0/1) (Default: 1)
@@ -35,12 +35,12 @@ All you need is to install the folder structure to your server. And you are read
 
 It is recomended you edit these ConVars inside csgo/cfg/sourcemod/plugin.NadeTails.cfg (which is created on first run) otherwise you might have some issues with your settings saving.
 
-## Commands
+### Commands
 
 * tails - Toggles grenade tails.
 * tailsmenu - Admin menu to toggle Nade Tails on players (Flag required: ADMFLAG_KICK or override using https://wiki.alliedmods.net/Overridi...ess_(SourceMod)
 
-## Colors
+### Colors
 
 Colors for the trails can be set in two different ways, using predefined colors, or manually defined RGB(A) values. (Alpha is optional).
 The predefined colors are:
