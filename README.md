@@ -61,6 +61,7 @@ The predefined colors are:
 * Purple
 * Teal
 * Navy
+* Orange
 
 Manually defined colors are passed as RGBA strings.
 
