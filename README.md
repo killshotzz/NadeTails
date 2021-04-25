@@ -65,11 +65,11 @@ The predefined colors are:
 Manually defined colors are passed as RGBA strings.
 
 **Color Examples:**
-sm_tails_hecolor "red"
-sm_tails_flashcolor "white"
-sm_tails_decoycolor "0 0 128 255" //RED GREEN BLUE ALPHA
-sm_tails_smokecolor "0 255 255" //this defaults the alpha to 225
-sm_tails_inccolor "random" //chooses random color
+* sm_tails_hecolor "red"
+* sm_tails_flashcolor "white"
+* sm_tails_decoycolor "0 0 128 255" //RED GREEN BLUE ALPHA
+* sm_tails_smokecolor "0 255 255" //this defaults the alpha to 225
+* sm_tails_inccolor "random" //chooses random color
 
 You can find a preview [here](https://i.imgur.com/MJXEcna.png)
 
