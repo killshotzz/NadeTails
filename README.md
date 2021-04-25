@@ -61,7 +61,6 @@ The predefined colors are:
 * Purple
 * Teal
 * Navy
-* Orange
 
 Manually defined colors are passed as RGBA strings.
 
@@ -81,17 +80,17 @@ This plugin is an old plugin, that I have decided to revive. The reason is, that
 ## Changelog
 
 *ChangeLog:
-Version 1.0:
-Initial Release
+Version 1.0:*
+* *Initial Release*
 
-*Version 2.0:
-Added Convars for everything ever (colors, time, invididual enable, etc..)
-Added a menu to toggle tails on clients
+*Version 2.0:*
+* *Added Convars for everything ever (colors, time, invididual enable, etc..)*
+* *Added a menu to toggle tails on clients*
 
-*Version 3.0:
-* Fixed small FCVAR problems
-* Fixed a problem with EdictClass not being correct and causin an error*
-* H3Bus added **a** flag to also respond to NadeTails. This means that if you have VIP flagged **a** they can do this also.
+*Version 3.0:*
+* *Fixed small FCVAR problems*
+* *Fixed a problem with EdictClass not being correct and causin an error*
+* *H3Bus added **a** flag to also respond to NadeTails. This means that if you have VIP flagged **a** they can do this also.*
 
 **Current Version: 3.0**
 
