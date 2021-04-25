@@ -96,9 +96,9 @@ Version 1.0:*
 
 ## Credits
 
-Internet Bully - Original creator of the project.
-@kstheman - Reforger of the project.
-H3Bus - Making **a** available as a flag to use the plugin for VIP members.
+- Internet Bully - Original creator of the project.
+- @kstheman - Reforger of the project.
+- H3Bus - Making **a** available as a flag to use the plugin for VIP members.
 
 
 ## To-Do
