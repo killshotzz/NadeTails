@@ -46,7 +46,6 @@ new g_ColorSilver[]	= {192,192,192};
 new g_ColorTeal[]		= {0,128,128};
 new g_ColorPurple[]	= {128,0,128};
 new g_ColorOlive[]	= {128,128,0};
-new g_ColorOrange[]	= {255,153,0};
 //end colors
 
 public Plugin:myinfo =
@@ -331,31 +330,33 @@ public OnEntityCreated(entity, const String:classname[])
 
 public OnEntitySpawned(entity)
 {
-    if(IsValidEntity(entity))
+    if(IsValidEntity(entity) && IsValidEdict(entity))
     {
-	   decl String:class_name[32];
-	   GetEdictClassname(entity, class_name, 32);
-	   new owner = GetEntPropEnt(entity, Prop_Data, "OwnerEntity");
-	
-	   if(StrContains(class_name, "projectile") != -1 && IsValidEntity(entity) && (((GetConVarBool(g_AllowPlayers) || isAdmin(owner)) && Tails[owner]) || GetConVarBool(g_DefaultOn)))
-	       {
-		      if(StrContains(class_name, "hegrenade") != -1 && GetConVarBool(g_EnableHETails))
-			     GetSetColor(g_HEColor);
-		      else if(StrContains(class_name, "flashbang") != -1 &&       GetConVarBool(g_EnableFlashTails))
-			     GetSetColor(g_FlashColor);
-		      else if(StrContains(class_name, "smoke") != -1 && GetConVarBool(g_EnableSmokeTails))    
-			     GetSetColor(g_SmokeColor);
-		      else if(StrContains(class_name, "decoy") != -1 && GetConVarBool(g_EnableDecoyTails))
-			     GetSetColor(g_DecoyColor);
-		      else if(StrContains(class_name, "molotov") != -1 && GetConVarBool(g_EnableMolotovTails))
-			     GetSetColor(g_MolotovColor);
-		      else if(StrContains(class_name, "incgrenade") != -1 && GetConVarBool(g_EnableIncTails))
-			     GetSetColor(g_IncColor);
-		      TE_SetupBeamFollow(entity, g_iBeamSprite, 0, GetConVarFloat(g_TailTime), GetConVarFloat(g_TailWidth), GetConVarFloat(g_TailWidth), GetConVarInt(g_TailFadeTime), TempColorArray);
-		      TE_SendToAll();
+        decl String:class_name[32];
+        GetEdictClassname(entity, class_name, 32);
+        new owner = GetEntPropEnt(entity, Prop_Data, "m_hOwnerEntity");
+        if(0 < owner <= MaxClients && IsClientInGame(owner)) // add any other necessary checks here if you want
+        {
+            if(StrContains(class_name, "projectile") != -1 && (((GetConVarBool(g_AllowPlayers) || isAdmin(owner)) && Tails[owner]) || GetConVarBool(g_DefaultOn)))
+            {
+                if(StrContains(class_name, "hegrenade") != -1 && GetConVarBool(g_EnableHETails))
+                    GetSetColor(g_HEColor);
+                else if(StrContains(class_name, "flashbang") != -1 && GetConVarBool(g_EnableFlashTails))
+                    GetSetColor(g_FlashColor);
+                else if(StrContains(class_name, "smoke") != -1 && GetConVarBool(g_EnableSmokeTails))
+                    GetSetColor(g_SmokeColor);
+                else if(StrContains(class_name, "decoy") != -1 && GetConVarBool(g_EnableDecoyTails))
+                    GetSetColor(g_DecoyColor);
+                else if(StrContains(class_name, "molotov") != -1 && GetConVarBool(g_EnableMolotovTails))
+                    GetSetColor(g_MolotovColor);
+                else if(StrContains(class_name, "incgrenade") != -1 && GetConVarBool(g_EnableIncTails))
+                    GetSetColor(g_IncColor);
+                TE_SetupBeamFollow(entity, g_iBeamSprite, 0, GetConVarFloat(g_TailTime), GetConVarFloat(g_TailWidth), GetConVarFloat(g_TailWidth), GetConVarInt(g_TailFadeTime), TempColorArray);
+                TE_SendToAll();
             }
-	}
-}
+        }
+    }
+} 
 
 public isAdmin(client)
 {
