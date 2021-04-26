@@ -9,7 +9,7 @@ It's fairly a plug-and-play plugin! You will be generated a CFG file, that you u
 
 ### Installation
 
-All you need is to install the folder structure to your server. And you are ready to go. You can of course look down under here for ConVars.
+All you need is to download the release on the right, and you are ready to go. You can of course look down under here for ConVars.
 
 ### ConVars
 
